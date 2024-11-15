@@ -2,6 +2,8 @@
 
 This project is a mini feature of a CRM system designed to manage customer/client contact information. It allows users to perform CRUD (Create, Read, Update, Delete) operations on contacts and provides an intuitive UI for seamless interaction.
 
+DEMO: https://erino-crud-frontend.vercel.app/
+
 ---
 
 ## Features
