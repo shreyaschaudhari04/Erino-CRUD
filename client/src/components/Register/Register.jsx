@@ -6,6 +6,9 @@ import { addData } from '../context/ContextProvider';
 import Navbar from "../Navbar/Navbar"
 
 const Register = () => {
+
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -35,7 +38,7 @@ const Register = () => {
     const { firstName, lastName, email, mobileNumber, company, jobTitle } = formData;
 
     try {
-      const res = await fetch("/contacts", {
+      const res = await fetch(`${BASE_URL}/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

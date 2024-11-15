@@ -8,6 +8,9 @@ import Navbar from "../Navbar/Navbar"
 
 
 const Details = () => {
+
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
   const navigate = useNavigate();
   const { id } = useParams();  
   const [user, setUser] = useState(null);
@@ -15,7 +18,7 @@ const Details = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const res = await fetch(`/contacts/${id}`, { method: 'GET' });
+        const res = await fetch(`${BASE_URL}/contacts/${id}`, { method: 'GET' });
         const data = await res.json();
         if (res.ok) {
           setUser(data);

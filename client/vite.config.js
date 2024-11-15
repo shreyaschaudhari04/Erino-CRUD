@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/contacts': 'https://erino-crud-api.vercel.app/', 
+      '/contacts': 'http://localhost:3000/',  
     }
   }
 })
