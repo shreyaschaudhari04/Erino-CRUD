@@ -58,7 +58,7 @@ const Edit = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`/contacts/${id}`, {
+      const res = await fetch(`${BASE_URL}/contacts/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
