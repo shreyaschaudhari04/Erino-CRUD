@@ -39,4 +39,22 @@ git clone https://github.com/your-username/contact-management-crm.git
 cd contact-management-crm
 ```
 ### 2. Backend Setup
+------------------------------------
+1. Navigate to the backend directory:
 ```bash
+cd backend
+```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a .env file in the backend directory and add the following variables:
+```bash
+PORT=3000
+MONGO_URI=<your-mongodb-connection-uri>
+```
+4. Start the backend server:
+```bash
+nodemon app.js
+
+
