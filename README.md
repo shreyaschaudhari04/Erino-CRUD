@@ -42,12 +42,12 @@ cd contact-management-crm
 ------------------------------------
 1. Navigate to the backend directory:
 ```bash
-cd backend
+cd server
 ```
 2. Install dependencies:
-   ```bash
+```bash
    npm install
-   ```
+```
 3. Create a .env file in the backend directory and add the following variables:
 ```bash
 PORT=3000
@@ -56,5 +56,30 @@ MONGO_URI=<your-mongodb-connection-uri>
 4. Start the backend server:
 ```bash
 nodemon app.js
+```
+The backend server will run on http://localhost:3000.
 
+### 2. Frontend Setup
+----------------------------------
+1. Navigate to the frontend directory:
+```bash
+cd frontend
+```
+2. Install dependencies:
+```bash
+npm install
+```
+3. Create a .env file in the frontend directory and add the following variable:
+```bash
+VITE_API_BASE_URL=http://localhost:3000
+```
+4. npm run dev
+```bash
+npm run dev
+```
+The frontend will run on http://localhost:5173 by default.
+
+### 4. Run the Project
+1. Ensure the backend and frontend servers are running.
+2. Open your browser and navigate to http://localhost:5173.
 
