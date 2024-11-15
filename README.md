@@ -12,7 +12,9 @@ DEMO: https://erino-crud-frontend.vercel.app/
 - View all contacts in a paginated and sortable table.
 - Edit and update contact details as needed.
 - Delete outdated or duplicate contact entries.
+- Search for contacts in the list
 - Backend API for managing contact data with proper error handling.
+  
 
 ---
 
