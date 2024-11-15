@@ -1,12 +1,12 @@
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Register from './components/Register/Register';
-import { Routes, Route, useLocation } from "react-router-dom";  // Import useLocation
+import { Routes, Route, useLocation } from "react-router-dom";
 import Edit from './components/Edit/Edit';
 import Details from './components/Details/Details';
 
 function App() {
-  const location = useLocation();  // Get current location to detect route
+  const location = useLocation();  
 
   return (
     <>

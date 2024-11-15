@@ -13,6 +13,8 @@ import Navbar from '../Navbar/Navbar';
 import '../Home/Home.css';
 
 const Home = () => {
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
   const [getUserData, setUserData] = useState([]);
   const [alert, setAlert] = useState({ open: false, message: '', severity: '' });
   const [searchQuery, setSearchQuery] = useState('');
@@ -61,7 +63,7 @@ const Home = () => {
 
   const getUsers = async () => {
     try {
-      const res = await fetch("/contacts", {
+      const res = await fetch(`${BASE_URL}/contacts`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -78,11 +80,14 @@ const Home = () => {
           mobileNumber: user.mobileNumber.toString(),
         }));
         setUserData(usersWithIds);
-        console.log("Get Data");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An unexpected error occurred");
+      setAlert({
+        open: true,
+        message: "An unexpected error occurred.",
+        severity: "error",
+      });
     }
   };
 
@@ -92,7 +97,7 @@ const Home = () => {
 
   const deleteUser = async (id) => {
     try {
-      const res = await fetch(`/contacts/${id}`, {
+      const res = await fetch(`${BASE_URL}/contacts/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
