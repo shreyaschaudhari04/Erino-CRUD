@@ -1,0 +1,40 @@
+.register-container {
+  margin-top: 32px;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.register-form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.register-grid-item {
+  margin-bottom: 16px;
+}
+
+.register-input {
+  border-radius: 8px;
+}
+
+.register-button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-button:hover {
+  background-color: #0069d9;
+}
