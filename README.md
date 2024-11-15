@@ -37,4 +37,6 @@ This project is a mini feature of a CRM system designed to manage customer/clien
 ```bash
 git clone https://github.com/your-username/contact-management-crm.git
 cd contact-management-crm
+```
 ### 2. Backend Setup
+```bash
