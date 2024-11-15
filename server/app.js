@@ -6,18 +6,20 @@ const app = express();
 const router = require('./routes/router');
 
 const corsOptions = {
-  origin: 'https://erino-crud-frontend.vercel.app/',
+  origin: 'https://erino-crud-frontend.vercel.app',
   methods: "GET, POST, PUT, DELETE, OPTIONS",
   allowedHeaders: "Content-Type, Authorization",
   preflightContinue: false,
 };
 
 app.use(cors(corsOptions));
-app.options('https://erino-crud-frontend.vercel.app/', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+
+
+app.options('*', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://erino-crud-frontend.vercel.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.sendStatus(200);
+  res.sendStatus(200);  
 });
 
 app.use(express.json());
